@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <meta property="og:image" content="http://campusparty.herokuapp.com/img/negao.png"/>
+    <meta property="og:title" content="Campus Party 2017"/>
+    <meta property="og:description" content="Quero uma camiseta"/>
+</head>
+<body>
+
+<a-scene>
+    <a-entity position="0 1.8 8">
+        <a-camera id="camera">
+            <a-cursor fuse="true" fuseTimeout="1000" color="#4CC3D9">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.5 0.5 0.5" to="1 1 1"></a-animation>
+                <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" fill="forwards" from="3 3 3" to="1 1 1"></a-animation>
+            </a-cursor>
+        </a-camera>
+    </a-entity>
+
+    
+    <a-assets>
+        <!-- luz -->
+        <img id="lightswitch" src="img/switch.png">
+        
+        <!-- PROFISSIONAL -->   
+        <img id="camara" src="img/camara.png">
+        <a-mixin id="camaratxt" text="color: white; anchor: center; font: sourcecodepro; value: (2017) Analista Legislativo"></a-mixin>
+                
+        <img id="bcb" src="img/bcb.gif">
+        <a-mixin id="bcbtxt" text="color: white; anchor: center; font: sourcecodepro; value: (2011-2017) Coordenador"></a-mixin>
+        
+        <img id="take" src="img/take.jpg">
+        <a-mixin id="taketxt" text="color: white; anchor: center; font: sourcecodepro; value: (2005-2011) Lider de equipe"></a-mixin>
+        
+        <img id="caixa" src="img/caixa.png">
+        <a-mixin id="caixatxt" text="color: white; anchor: center; font: sourcecodepro; value: (2003-2005) Auxiliar Administrativo"></a-mixin>
+        
+        <img id="puc" src="img/puc.jpg">
+        <a-mixin id="puctxt" text="color: white; anchor: center; font: sourcecodepro; value: (2002-2003) Suporte"></a-mixin>
+        
+        
+        
+        <!--diplomas-->
+        <img id="ufmg" src="img/ufmg.jpg">
+        <a-mixin id="ufmgtxt" text="color: white; anchor: center; font: sourcecodepro; value: 2005 Administracao"></a-mixin>
+        
+        <img id="pucfacu" src="img/pucdiploma.jpg">
+        <a-mixin id="pucfacutxt" text="color: white; anchor: center; font: sourcecodepro; value: 2004 Sistemas de informacao"></a-mixin>
+        
+        <img id="unb" src="img/unb.jpg">
+        <a-mixin id="unbtxt" text="color: white; anchor: center; font: sourcecodepro; value: 2014 MSc Ciencia da Informacao"></a-mixin>
+        
+        
+        
+        <!-- contatos -->
+        <img id="github" src="img/github.gif">
+        <img id="facebook" src="img/facebook.png">
+        <img id="twitter" src="img/twitter.png">
+        
+        
+        <!-- artigos -->
+        <img id="incd" src="img/brasnam.jpg">
+        <img id="brasnam" src="img/brasnam.jpg">
+        
+        
+        
+        <!-- PERFIL -->
+        <img id="profile" src="img/profile.jpg">
+        <a-mixin id="profiletxt" text="color: white; anchor: center; font: sourcecodepro; value: I am Rafael :-) "></a-mixin>
+        
+        <!-- sky -->
+        <img id="skyTexture"  src="img/fundo.png">
+    
+    </a-assets>
+
+    
+    <!-- luz -->
+    <a-entity class="switch"  geometry="primitive: cone" material="src: #lightswitch" scale="1 0.1 1" position="0 -2 0" >
+        <a-event name="mouseenter" rotation="180 0 0"></a-event>
+        <a-event name="mouseleave" rotation="0 0 0"></a-event>
+    </a-entity>
+
+    
+    <!-- PROFISSIONAL -->   
+    <a-sphere class="apagar" opacity="0.5" src="#camara" radius="3" position="-20 0 -15"></a-sphere>
+    <a-text  class="apagar" mixin="camaratxt" font="kelsonsans" position="-20 4 -15" wrap-count="12" rotation="0 90 0"></a-text>
+
+    <a-sphere  class="apagar" src="#bcb" radius="3" position="-20 0 -25"></a-sphere>
+    <a-text  class="apagar" mixin="bcbtxt" font="kelsonsans" position="-20 4 -25" wrap-count="12" rotation="0 90 0"></a-text>
+
+    <a-sphere  class="apagar" src="#take" radius="3" position="-20 0 -35"></a-sphere>
+    <a-text  class="apagar" mixin="taketxt" font="kelsonsans" position="-20 4 -35" wrap-count="12" rotation="0 90 0"></a-text>
+
+    <a-sphere  class="apagar" src="#caixa" radius="3" position="-20 0 -45"></a-sphere>
+    <a-text class="apagar"  mixin="caixatxt" font="kelsonsans" position="-20 4 -45" wrap-count="12" rotation="0 90 0"></a-text>
+
+    <a-sphere  class="apagar" src="#puc" radius="3" position="-20 0 -55"></a-sphere>
+    <a-text  class="apagar" mixin="puctxt" font="kelsonsans" position="-20 4 -55" wrap-count="12" rotation="0 90 0"></a-text>
+
+
+    
+    
+    
+    <!-- diplomas -->
+    <a-text  class="apagar" mixin="ufmgtxt" font="kelsonsans" position="8 0 -10" wrap-count="13" rotation="0 -60 80"></a-text>
+    <a-cylinder id="ufmg" class="apagar" radius="0.2" transparen="true"  src="#ufmg" position="8 0 -8" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
+
+    <a-text  class="apagar" mixin="pucfacutxt" font="kelsonsans" position="13 0 -13" wrap-count="13" rotation="0 -60 80"></a-text>
+    <a-cylinder id="pucfacu" class="apagar" radius="0.2"  src="#pucfacu" position="13 0 -11" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
+    
+    <a-text  class="apagar" mixin="unbtxt" font="kelsonsans" position="9 0 -4" wrap-count="20" rotation="0 -60 80"></a-text>
+    <a-cylinder id="pucfacu" class="apagar" radius="0.2" transparen="true"  src="#unb" position="10 0 -4" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
+
+    
+    
+    <!-- contatos -->
+    <a-cylinder onclick="window.location = 'http://github.com/rafaelhss'" id="github" class="apagar" radius="0.5" transparen="true"  src="#github" position="3 0 -13" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
+    <a-cylinder onclick="window.location = 'http://twitter.com/rafelrafel'" id="twitter" class="apagar" radius="0.5" transparen="true"  src="#twitter" position="4 0 -17" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
+    <a-cylinder onclick="window.location = 'https://www.facebook.com/rafael.henrique.507464'" id="facebook" class="apagar" radius="0.5" transparen="true"  src="#facebook" position="2.2 0 -15" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
+    
+    
+    <!-- artigos -->
+    <a-box  class="apagar" onclick="window.location = 'http://www.revistas.usp.br/incid/article/view/76282'" scale="1.0 1.3 0.2"  position="-5 0 -3" src="#incd" rotation="-70 20 -10" > </a-box>
+    <a-box   class="apagar"onclick="window.location = 'http://ebooks.pucrs.br/edipucrs/anais/csbc/assets/2016/brasnam/11.pdf'" scale="1.0 1.3 0.2"  position="-3.8 0 -2" src="#brasnam" rotation="-70 10 30" > </a-box>
+    
+    
+    
+    <a-text class="apagar" mixin="profiletxt" font="kelsonsans" width="170" position="-5 30 -90" wrap-count="20" rotation="0 20 0"></a-text>
+    <a-icosahedron onclick="samba()" class="apagar" color="#3D6A7D" radius="29" transparen="true"  src="#profile" position="35 30 -90" rotation="-5 60 30">
+      <a-animation attribute="rotation"
+               begin="mouseenter"
+               dur="50000"
+               fill="forwards"
+               to="360 820 0"
+               repeat="indefinite"></a-animation>
+        <a-animation attribute="scale" begin="mouseenter" to="2 2 2"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+    </a-icosahedron>
+    <a-entity
+          position="0 0 7"  
+          rotation="-50 0 0"
+          geometry="primitive: plane; width: 6; height: auto"
+          material="color: #3D6A7D"
+          text="value: Um pouco sobre mim... use as teclas WASD para dar um role..."></a-entity>
+    
+    
+    
+    <a-sky color="#000"></a-sky>
+    <a-sky id="fundo" src="#skyTexture"></a-sky>
+</a-scene>
+</body>
+<script>
+    
+    
+    function samba(){
+        console.log("de janeiro");
+    }
+    
+
+    var aceso = false;
+
+    var luz = function(opacity) {
+        var boxEl = document.getElementById('fundo');
+        boxEl.setAttribute('opacity', opacity);
+
+        descendents = document.getElementsByClassName('apagar');
+        var i;
+        for (i = 0; i < descendents.length; ++i) {
+            descendents[i].setAttribute('opacity', opacity);
+        }
+    }
+
+    var liga = function(){
+        luz(0.99);
+        aceso = true;
+    }
+
+    var desliga = function(){
+        luz(0.005);
+        aceso = false;
+    }
+
+
+    var boxEl = document.querySelector('.switch');
+    boxEl.addEventListener('mouseenter', function () {
+        console.log("dasdas");
+        boxEl.setAttribute('rotation', {x: 180, y: 0, z: 0});
+        if(aceso){
+            desliga()
+        }
+        else
+        {
+            liga()
+        }
+
+    });
+    
+    var applyAnimation = function(tagname, html){
+        descendents = document.getElementsByTagName(tagname);
+    
+        var i;
+        for (i = 0; i < descendents.length; ++i) {
+            descendents[i].innerHTML = descendents[i].innerHTML + html
+        }
+    }
+    
+    var applyZoom = function(tagname){
+        applyAnimation(tagname,' <a-animation attribute="scale" begin="mouseenter" to="2 2 2"></a-animation>  <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>');
+    }
+
+    
+    
+    desliga();
+    
+    var animationRotate = '<a-animation attribute="rotation" begin="mouseenter" dur="10000" fill="forwards" to="0 360 0"></a-animation>'
+    applyAnimation('a-sphere', animationRotate);
+    
+    applyZoom('a-text');
+    applyZoom('a-sphere');
+    
+
+
+
+</script>
+</html>
