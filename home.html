@@ -83,7 +83,7 @@
     </a-entity>
 
     
-    <!-- PROFISSIONAL -->   
+    <!-- PROFISSIONAL  
     <a-sphere class="apagar" opacity="0.5" src="#camara" radius="3" position="-20 0 -15"></a-sphere>
     <a-text  class="apagar" mixin="camaratxt" font="kelsonsans" position="-20 4 -15" wrap-count="12" rotation="0 90 0"></a-text>
 
@@ -99,11 +99,11 @@
     <a-sphere  class="apagar" src="#puc" radius="3" position="-20 0 -55"></a-sphere>
     <a-text  class="apagar" mixin="puctxt" font="kelsonsans" position="-20 4 -55" wrap-count="12" rotation="0 90 0"></a-text>
 
-
+ --> 
     
     
     
-    <!-- diplomas -->
+    <!-- diplomas
     <a-text  class="apagar" mixin="ufmgtxt" font="kelsonsans" position="8 0 -10" wrap-count="13" rotation="0 -60 80"></a-text>
     <a-cylinder id="ufmg" class="apagar" radius="0.2" transparen="true"  src="#ufmg" position="8 0 -8" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
 
@@ -113,7 +113,7 @@
     <a-text  class="apagar" mixin="unbtxt" font="kelsonsans" position="9 0 -4" wrap-count="20" rotation="0 -60 80"></a-text>
     <a-cylinder id="pucfacu" class="apagar" radius="0.2" transparen="true"  src="#unb" position="10 0 -4" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
 
-    
+     -->
     
     <!-- contatos -->
     <a-cylinder onclick="window.location = 'http://github.com/rafaelhss'" id="github" class="apagar" radius="0.5" transparen="true"  src="#github" position="3 0 -13" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
@@ -138,13 +138,15 @@
         <a-animation attribute="scale" begin="mouseenter" to="2 2 2"></a-animation>
         <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
     </a-icosahedron>
+   
+    <!--
     <a-entity
           position="0 0 7"  
           rotation="-50 0 0"
           geometry="primitive: plane; width: 6; height: auto"
           material="color: #3D6A7D"
           text="value: Um pouco sobre mim... use as teclas WASD para dar um role..."></a-entity>
-    
+    -->
     
     
     <a-sky color="#000"></a-sky>
