@@ -26,6 +26,19 @@
         <video id="videotoni" autoplay loop="true" src="vid/toni.mp4"></video>
         <video id="videoale" autoplay loop="true" src="vid/mov02605_noaudio2.mp4"></video>
         
+        <!-- STREET -->
+        <img id="sfv" src="img/sfv.png">
+        
+        <!-- Facts -->
+        <a-mixin id="factlabeltxt" text="color: white; anchor: center; font: sourcecodepro; value: Um fato aleatorio sobre mim:"></a-mixin>
+        
+        <a-mixin id="fact1" text="color: white; anchor: center; font: sourcecodepro; value: Venci uma batalha de rap no finado mosdefinitely.com"></a-mixin>
+        <a-mixin id="fact2" text="color: white; anchor: center; font: sourcecodepro; value: Fui homenageado no forum da whiplash com o 'poema para os fanhos do brasil'"></a-mixin>
+        
+        <!-- reload -->
+        <img id="reload" src="img/reload.png">
+        
+        
         
         <!-- luz -->
         <img id="lightswitch" src="img/switch.png">
@@ -134,7 +147,7 @@
     
     
     <a-text class="apagar" mixin="profiletxt" font="kelsonsans" width="170" position="-5 30 -90" wrap-count="20" rotation="0 20 0"></a-text>
-    <a-icosahedron onclick="samba()" class="apagar" color="#3D6A7D" radius="29" transparen="true"  src="#profile" position="35 30 -90" rotation="-5 60 30">
+    <a-icosahedron class="apagar" color="#3D6A7D" radius="29" transparen="true"  src="#profile" position="35 30 -90" rotation="-5 60 30">
       <a-animation attribute="rotation"
                begin="mouseenter"
                dur="50000"
@@ -154,7 +167,22 @@
           text="value: Um pouco sobre mim... use as teclas WASD para dar um role..."></a-entity>
     -->
     
+    <!-- facts -->
+    <a-text id="factlabel"  position="7 5 19" rotation="0 -150 25" class="apagar" mixin="factlabeltxt" wrap-count="20"></a-text>
+    <a-text id="fact"  position="4 4 20" rotation="0 -150 0" class="apagar" mixin="camaratxt" wrap-count="20"></a-text>
     
+    <a-sphere class="apagar"  onclick="randomFact()"  opacity="0.99" src="#reload" rotation="0 130 0" radius="0.65" position="9 3 20" geometry="height:10;width:15">
+        <a-animation attribute="rotation" begin="click" dur="1000" fill="forwards" to="0 500 0"></a-animation>
+    </a-sphere>
+    
+    
+    <!-- street -->
+    <a-box class="apagar" opacity="0.99" src="#sfv" rotation="0 80 0" radius="3" position="-60 0 -10" geometry="height:10;width:15">
+        <a-animation attribute="scale" begin="mouseenter" to="3 3 3"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+    </a-box>
+        
+    <!-- toni -->
     <a-video src="#videotoni"  class="apagar"  transparent="true" height="5" width="5" position="9 4 8" rotation="18 70 -50" geometry="primitive:box;depth:4;height:4;width:4;radius:2.29;phiLength:360.16" material="shader:standard;transparent:false"></a-video>
 
     <a-video class="apagar" src="#videoale" transparent="true" height="5" width="8" position="-31 17 45" rotation="0 80 -23" geometry="primitive:sphere;radius:8;height:5;width:8"></a-video>
@@ -167,8 +195,44 @@
 <script>
     
     
+    
+    
+    
     function samba(){
         console.log("de janeiro");
+    }
+    
+    var lastFact = 0;
+    var randomFact = function(){
+        console.log("de janeirrandom o");
+        
+        
+        
+
+        var sceneEl = document.querySelector('a-scene');
+
+        sceneEl.removeChild(document.getElementById("fact"));
+        
+        var entityEl = document.createElement('a-text');
+        entityEl.setAttribute('position','4 4 20');
+        entityEl.setAttribute('rotation','0 -150 0');
+        entityEl.setAttribute('class','apagar');
+        entityEl.setAttribute('id','fact');
+        entityEl.setAttribute('wrap-count','20');
+        
+        var numero = 0;
+        do {
+          numero = Math.floor(Math.random()*2) + 1;    
+        } while(numero == lastFact);
+        lastFact = numero;
+        
+        console.log(numero);
+        
+        var nome = 'fact' + numero;
+        entityEl.setAttribute('mixin',nome);    
+        
+                
+        sceneEl.appendChild(entityEl);
     }
     
 
@@ -228,10 +292,10 @@
     desliga();
     
     var animationRotate = '<a-animation attribute="rotation" begin="mouseenter" dur="10000" fill="forwards" to="0 360 0"></a-animation>'
-    applyAnimation('a-sphere', animationRotate);
+    //applyAnimation('a-sphere', animationRotate);
     
-    applyZoom('a-text');
-    applyZoom('a-sphere');
+    //applyZoom('a-text');
+    //applyZoom('a-sphere');
     
 
 
