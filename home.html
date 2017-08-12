@@ -25,6 +25,7 @@
         <!-- videos -->
         <video id="videotoni" autoplay loop="true" src="vid/toni.mp4"></video>
         <video id="videoale" autoplay loop="true" src="vid/mov02605_noaudio2.mp4"></video>
+        <video id="videoagua" autoplay loop="true" src="vid/agua.mp4"></video>
         
         <!-- STREET -->
         <img id="sfv" src="img/sfv.png">
@@ -32,8 +33,11 @@
         <!-- Facts -->
         <a-mixin id="factlabeltxt" text="color: white; anchor: center; font: sourcecodepro; value: Um fato aleatorio sobre mim:"></a-mixin>
         
+        <a-mixin id="facttxt" text="color: white; anchor: center; font: sourcecodepro; value: ..."></a-mixin>
+        
         <a-mixin id="fact1" text="color: white; anchor: center; font: sourcecodepro; value: Venci uma batalha de rap no finado mosdefinitely.com"></a-mixin>
         <a-mixin id="fact2" text="color: white; anchor: center; font: sourcecodepro; value: Fui homenageado no forum da whiplash com o 'poema para os fanhos do brasil'"></a-mixin>
+        <a-mixin id="fact3" text="color: white; anchor: center; font: sourcecodepro; value: Invadi o palco do Angra, dei um abraco e uma cabecada no Edu e pulei na galra."></a-mixin>
         
         <!-- reload -->
         <img id="reload" src="img/reload.png">
@@ -44,33 +48,8 @@
         <img id="lightswitch" src="img/switch.png">
         
         <!-- PROFISSIONAL -->   
-        <img id="camara" src="img/camara.png">
-        <a-mixin id="camaratxt" text="color: white; anchor: center; font: sourcecodepro; value: (2017) Analista Legislativo"></a-mixin>
                 
-        <img id="bcb" src="img/bcb.gif">
-        <a-mixin id="bcbtxt" text="color: white; anchor: center; font: sourcecodepro; value: (2011-2017) Coordenador"></a-mixin>
-        
-        <img id="take" src="img/take.jpg">
-        <a-mixin id="taketxt" text="color: white; anchor: center; font: sourcecodepro; value: (2005-2011) Lider de equipe"></a-mixin>
-        
-        <img id="caixa" src="img/caixa.png">
-        <a-mixin id="caixatxt" text="color: white; anchor: center; font: sourcecodepro; value: (2003-2005) Auxiliar Administrativo"></a-mixin>
-        
-        <img id="puc" src="img/puc.jpg">
-        <a-mixin id="puctxt" text="color: white; anchor: center; font: sourcecodepro; value: (2002-2003) Suporte"></a-mixin>
-        
-        
-        
-        <!--diplomas-->
-        <img id="ufmg" src="img/ufmg.jpg">
-        <a-mixin id="ufmgtxt" text="color: white; anchor: center; font: sourcecodepro; value: 2005 Administracao"></a-mixin>
-        
-        <img id="pucfacu" src="img/pucdiploma.jpg">
-        <a-mixin id="pucfacutxt" text="color: white; anchor: center; font: sourcecodepro; value: 2004 Sistemas de informacao"></a-mixin>
-        
-        <img id="unb" src="img/unb.jpg">
-        <a-mixin id="unbtxt" text="color: white; anchor: center; font: sourcecodepro; value: 2014 MSc Ciencia da Informacao"></a-mixin>
-        
+    
         
         
         <!-- contatos -->
@@ -91,6 +70,8 @@
         
         <!-- sky -->
         <img id="skyTexture"  src="img/fundo.png">
+        
+    
     
     </a-assets>
 
@@ -102,37 +83,6 @@
     </a-entity>
 
     
-    <!-- PROFISSIONAL  
-    <a-sphere class="apagar" opacity="0.5" src="#camara" radius="3" position="-20 0 -15"></a-sphere>
-    <a-text  class="apagar" mixin="camaratxt" font="kelsonsans" position="-20 4 -15" wrap-count="12" rotation="0 90 0"></a-text>
-
-    <a-sphere  class="apagar" src="#bcb" radius="3" position="-20 0 -25"></a-sphere>
-    <a-text  class="apagar" mixin="bcbtxt" font="kelsonsans" position="-20 4 -25" wrap-count="12" rotation="0 90 0"></a-text>
-
-    <a-sphere  class="apagar" src="#take" radius="3" position="-20 0 -35"></a-sphere>
-    <a-text  class="apagar" mixin="taketxt" font="kelsonsans" position="-20 4 -35" wrap-count="12" rotation="0 90 0"></a-text>
-
-    <a-sphere  class="apagar" src="#caixa" radius="3" position="-20 0 -45"></a-sphere>
-    <a-text class="apagar"  mixin="caixatxt" font="kelsonsans" position="-20 4 -45" wrap-count="12" rotation="0 90 0"></a-text>
-
-    <a-sphere  class="apagar" src="#puc" radius="3" position="-20 0 -55"></a-sphere>
-    <a-text  class="apagar" mixin="puctxt" font="kelsonsans" position="-20 4 -55" wrap-count="12" rotation="0 90 0"></a-text>
-
- --> 
-    
-    
-    
-    <!-- diplomas
-    <a-text  class="apagar" mixin="ufmgtxt" font="kelsonsans" position="8 0 -10" wrap-count="13" rotation="0 -60 80"></a-text>
-    <a-cylinder id="ufmg" class="apagar" radius="0.2" transparen="true"  src="#ufmg" position="8 0 -8" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
-
-    <a-text  class="apagar" mixin="pucfacutxt" font="kelsonsans" position="13 0 -13" wrap-count="13" rotation="0 -60 80"></a-text>
-    <a-cylinder id="pucfacu" class="apagar" radius="0.2"  src="#pucfacu" position="13 0 -11" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
-    
-    <a-text  class="apagar" mixin="unbtxt" font="kelsonsans" position="9 0 -4" wrap-count="20" rotation="0 -60 80"></a-text>
-    <a-cylinder id="pucfacu" class="apagar" radius="0.2" transparen="true"  src="#unb" position="10 0 -4" rotation="5 30 -10" scale="2 6 2"></a-cylinder>
-
-     -->
     
     <!-- contatos -->
     <a-cylinder onclick="window.location = 'http://github.com/rafaelhss'" id="github" class="apagar" radius="0.5" transparen="true"  src="#github" position="3 0 -13" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
@@ -167,12 +117,18 @@
           text="value: Um pouco sobre mim... use as teclas WASD para dar um role..."></a-entity>
     -->
     
+    <!-- agua -->
+    <a-ring src="#agua" radius-inner="285" radius-outer="300" position="-305 -1 0" rotation="270 0 0"></a-ring>
+    
+    <a-video src="#videoagua"  class="apagar"  transparent="true" position="-305 -1 0" rotation="270 0 0" geometry="primitive:ring;radius-inner:285; radius-outer:300" material="shader:standard;transparent:false"></a-video>
+
+    
     <!-- facts -->
     <a-text id="factlabel"  position="7 5 19" rotation="0 -150 25" class="apagar" mixin="factlabeltxt" wrap-count="20"></a-text>
-    <a-text id="fact"  position="4 4 20" rotation="0 -150 0" class="apagar" mixin="camaratxt" wrap-count="20"></a-text>
+    <a-text id="fact"  position="4 4 20" rotation="0 -150 0" class="apagar" mixin="facttxt" wrap-count="20"></a-text>
     
-    <a-sphere class="apagar"  onclick="randomFact()"  opacity="0.99" src="#reload" rotation="0 130 0" radius="0.65" position="9 3 20" geometry="height:10;width:15">
-        <a-animation attribute="rotation" begin="click" dur="1000" fill="forwards" to="0 500 0"></a-animation>
+    <a-sphere class="apagar"  onmouseenter="randomFact()"  opacity="0.99" src="#reload" rotation="0 130 0" radius="0.65" position="9 3 20" geometry="height:10;width:15">
+        <a-animation attribute="rotation" begin="mouseenter" dur="1000" fill="forwards" to="0 500 0"></a-animation>
     </a-sphere>
     
     
@@ -222,7 +178,7 @@
         
         var numero = 0;
         do {
-          numero = Math.floor(Math.random()*2) + 1;    
+          numero = Math.floor(Math.random()*3) + 1;    
         } while(numero == lastFact);
         lastFact = numero;
         
@@ -289,7 +245,7 @@
 
     
     
-    desliga();
+    //desliga();
     
     var animationRotate = '<a-animation attribute="rotation" begin="mouseenter" dur="10000" fill="forwards" to="0 360 0"></a-animation>'
     //applyAnimation('a-sphere', animationRotate);
